@@ -1,4 +1,0 @@
-C:\Lab05_QuanLyThietBi\obj\Debug\net10.0\Lab05_QuanLyThietBi.GeneratedMSBuildEditorConfig.editorconfig
-C:\Lab05_QuanLyThietBi\obj\Debug\net10.0\Lab05_QuanLyThietBi.AssemblyInfoInputs.cache
-C:\Lab05_QuanLyThietBi\obj\Debug\net10.0\Lab05_QuanLyThietBi.AssemblyInfo.cs
-C:\Lab05_QuanLyThietBi\obj\Debug\net10.0\Lab05_QuanLyThietBi.csproj.CoreCompileInputs.cache
