@@ -25,7 +25,7 @@ public class Computer : Device, INetworkable
     {
         decimal cost = PurchasePrice * 0.05m;
         if (HasDedicatedGpu) cost += PurchasePrice * 0.02m;
-        if (GetYearsInUse() > 5) cost += PurchasePrice * 0.01m;
+        if (GetYearInUse() > 5) cost += PurchasePrice * 0.01m;
         return cost;
     }
 

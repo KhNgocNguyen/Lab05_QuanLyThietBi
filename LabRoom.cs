@@ -43,7 +43,7 @@ public class LabRoom
     {
         return _devices.FirstOrDefault(d => d.DeviceId == deviceId);
     }
-    public decimal CalculateAnnuaMaintenanceCost()
+    public decimal CalculateAnnualMaintenanceCost()
     {
         return _devices.Sum(d => d.CalculateAnnualMaintenanceCost());
     }

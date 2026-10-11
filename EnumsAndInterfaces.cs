@@ -14,7 +14,7 @@ public enum PrinterType
     Laser,
     Inkjet
 }
-public interface Inetworkable
+public interface INetworkable
 {
     string IpAddress { get; }
     bool IsConnected { get; }

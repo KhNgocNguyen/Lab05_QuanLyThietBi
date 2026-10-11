@@ -3,9 +3,7 @@
 // Họ tên: Nguyễn Khánh Ngọc
 /****************/ 
 using System;
-using System.Data;
-using System.Net.WebSockets;
-public abstract class DeviceStatus
+public abstract class Device
 {
     public string DeviceId {get; init;}
     public string DeviceName {get; set;}
@@ -20,32 +18,32 @@ public abstract class DeviceStatus
             _yearOfUse = value;
         }
     }private decimal _purchasePrice;
-    public decimal _purchasePrice
+    public decimal PurchasePrice
     {
         get => _purchasePrice;
         set
         {
             if (value <= 0)
                 throw new ArgumentException("Giá mua phải lớn hơn bằng 0.");
-            _purchasePrice=Value;
+            _purchasePrice=value;
         }
     }
     public DeviceStatus Status { get; set;}
-    protected Device(string deviceId, string devicename, int yearOfUse, decimal _purchasePrice, DeviceStatus status)
+    protected Device(string deviceId, string deviceName, int yearOfUse, decimal _purchasePrice, DeviceStatus status)
     {
         if (string.IsNullOrWhiteSpace(deviceId))
-            throw new ArgumantException("Mã thiết bị không được rỗng.");
+            throw new ArgumentException("Mã thiết bị không được rỗng.");
         DeviceId = deviceId;
-        DeviceName = devicename;
+        DeviceName = deviceName;
         YearOfUse = yearOfUse;
-        _purchasePrice=_purchasePrice;
+        PurchasePrice=_purchasePrice;
         Status = status;
     }
     public int GetYearInUse()
     {
-        return DataSetDateTime.Now.Year - YearOfUse;
+        return DateTime.Now.Year - YearOfUse;
     }
-    public abstract decimal CalculateAnnualMaintenceCost();
+    public abstract decimal CalculateAnnualMaintenanceCost();
     public override string ToString()
     {
         return $"[{DeviceId}] {DeviceName} - Tình trạng: {Status}";
