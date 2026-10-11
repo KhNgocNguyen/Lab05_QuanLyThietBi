@@ -6,7 +6,7 @@ using System;
 public enum DeviceStatus
 {
     Active,
-    UnderMaintenance
+    UnderMaintenance,
     Retired
 }
 public enum PrinterType
